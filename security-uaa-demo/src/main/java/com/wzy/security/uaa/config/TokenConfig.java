@@ -6,6 +6,10 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
+/**
+ * @author wzy
+ * @version 1.0
+ **/
 @Configuration
 public class TokenConfig {
     //私钥，自定义的

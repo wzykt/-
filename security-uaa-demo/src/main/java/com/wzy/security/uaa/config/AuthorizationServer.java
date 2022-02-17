@@ -24,6 +24,10 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import javax.sql.DataSource;
 import java.util.Arrays;
 
+/**
+ * @author wzy
+ * @version 1.0
+ **/
 @Configuration
 @EnableAuthorizationServer
 //标记是授权服务
@@ -52,7 +56,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     public AuthorizationServerTokenServices tokenServices() {
         DefaultTokenServices service = new DefaultTokenServices();
         service.setClientDetailsService(clientDetailsService);//客户端信息服务
-        service.setSupportRefreshToken(true);//是否产生刷新令牌 jwt时会将
+        service.setSupportRefreshToken(true);//是否产生刷新令牌
         service.setTokenStore(tokenStore);//令牌存储策略
 
         //令牌增强
